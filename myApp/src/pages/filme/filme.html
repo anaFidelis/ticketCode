@@ -1,0 +1,46 @@
+<!--
+  Generated template for the FilmePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{Filme.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <div style="text-align: center">
+    <img [src]="'https://image.tmdb.org/t/p/w300/'+Filme.backdrop_path">
+  </div>
+  <ion-card-content>
+    <h2>{{Filme.title}}</h2>
+    <h2> Nota: {{Filme.vote_average}} </h2>
+    <h6>Sinopse: </h6>
+    <p>{{Filme.overview}}</p>
+    <h6>Titulo original:</h6>
+    <p> {{Filme.original_title}} </p>
+    <h6>Generos:</h6>
+    <div *ngFor="let genero of Filme.genres">
+      <p>{{genero.name}}</p>
+    </div>
+    <h6>Produtoras:</h6>
+    <div *ngFor="let produtora of Filme.production_companies">
+      <p>{{produtora.name}}</p>
+    </div>
+    <h6>duração: {{Filme.runtime}} min</h6>
+  </ion-card-content>
+
+  <div>
+    <button class="botao" ion-fab mini (click)="presentActionSheet()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </div>
+
+</ion-content>

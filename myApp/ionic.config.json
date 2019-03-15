@@ -1,0 +1,13 @@
+{
+  "name": "myFilme",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/myfilme",
+      "proxyUrl": "http://localhost:8080/MyFilmeWebService/webresources/myFilme"
+    }
+  ]
+}

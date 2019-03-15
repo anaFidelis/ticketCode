@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>My Filmes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let filme of lista_Videos" (click)="showPageFilme(filme.id)">
+
+    <img [src]="'https://image.tmdb.org/t/p/w300/'+filme.backdrop_path">
+    <ion-card-content>
+      <h1>{{filme.title}}</h1>
+      <ion-item style="margin: 31px 8px 11px 0;">
+        <div>
+          <h2> Nota: {{filme.vote_average}}</h2>
+        </div>
+        <div>
+          <button class="botao" (click)="presentActionSheet()" ion-fab mini>
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </div>
+      </ion-item>
+      <p>{{filme.overview}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

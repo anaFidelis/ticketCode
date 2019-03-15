@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{lista.nome}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="create" (click)="configLista()"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let filmes of listaFilmes" (click)="showPageFilme(filmes.id)">
+
+    <img [src]="'https://image.tmdb.org/t/p/w300/'+filmes.backdrop_path">
+    <ion-card-content>
+      <h1>{{filmes.title}}</h1>
+      <ion-item style="margin: 31px 8px 11px 0;">
+        <div>
+          <h2> Nota: {{filmes.vote_average}}</h2>
+        </div>
+      </ion-item>
+      <p>{{filmes.overview}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-item>
+        <ion-label>Remover</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+    </ion-row>
+
+  </ion-card>
+</ion-content>
