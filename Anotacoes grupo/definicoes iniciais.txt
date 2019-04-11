@@ -1,0 +1,135 @@
+banco(Bárbara)
+	usuario
+		nome
+		login
+		senha
+		cpf
+		endereço
+		telefone
+	evento
+		código
+		tipo(privado, publico)
+		nome
+		descrição
+		data/hora
+		quantidade de pessoas
+		endereço
+		administrador
+		chave acesso(para evento privado)
+		status(cancelado, finalizado, rolando)
+		imagem
+	lote
+		evento
+		numero
+		valor
+	ingresso
+		usuario
+		evento
+		lote
+		QRCode
+		status
+front(Ana)
+	login
+		usuario
+		senha
+		link para cadastre-se
+	cadastre-se
+		nome
+		login
+		senha
+		cpf
+		endereço
+		telefone
+	tela de início
+		menu
+		listagem de eventos disponíveis para compra
+		opção de pesquisa
+	botão câmera
+		abrir a câmera
+	menu
+		logout
+		configurações*
+		perfil
+		meus ingressos
+		meus eventos
+		início
+		código ingresso
+	configurações*
+	perfil
+		cadastro do usuário editável
+	meus ingressos
+		listagem dos ingressos
+	meus eventos
+		listagem dos meus eventos que sou admin
+		link para criar novo evento
+		clicar no evento da lista direciona para o controle do evento		
+	código ingreso
+		abrir modal para inserir código de convite
+	cadastro de evento
+		tipo(privado, publico)
+		nome
+		descrição
+		data/hora
+		quantidade de pessoas
+		endereço
+		imagem
+	controle do evento
+		tipo(privado, publico)
+		nome
+		descrição
+		data/hora
+		quantidade de pessoas
+		endereço
+		imagem
+		quantide de pessoas "confirmadas"		
+		botão que direciona para edição do evento
+		mostrar a chave de acesso
+	
+back(Bento)
+	login
+		usuario
+		senha
+		link para cadastre-se
+	cadastre-se
+		nome
+		login
+		criptografar senha
+		validar cpf
+		endereço
+		telefone
+	tela de início
+		menu
+		listagem de eventos disponíveis para compra(ordenar por data, nome)
+		opção de pesquisa(filtra pela pesquisa)
+	botão câmera
+		vai ler o qrCode do convidado
+		deve validar apenas se o adm que está lendo
+	menu		
+	configurações*
+	perfil
+		cadastro do usuário editável
+	meus ingressos
+		listagem dos ingressos
+	meus eventos
+		listagem dos meus eventos que sou admin		
+	código ingreso
+		registrar ingresso para o usuário para tal evento
+	cadastro de evento
+		tipo(privado, publico)
+		nome
+		descrição
+		data/hora
+		quantidade de pessoas
+		endereço
+		imagem
+	controle do evento
+		tipo(privado, publico)
+		nome
+		descrição
+		data/hora
+		quantidade de pessoas
+		endereço
+		imagem
+		quantide de pessoas "confirmadas"		
+		botão que direciona para edição do evento
+		mostrar a chave de acesso
