@@ -27,6 +27,7 @@ import { ConfigContaPageModule } from '../pages/config-conta/config-conta.module
 import { MinhaListaPageModule } from '../pages/minha-lista/minha-lista.module';
 import { ImagensPageModule } from '../pages/imagens/imagens.module';
 
+import { IonMaskModule } from '@pluritech/ion-mask';
 
 const configFireBase = {
   apiKey: "AIzaSyAocUCC5xOKTwyBxpLuDMdLpYCge1dtxIM",
@@ -63,7 +64,8 @@ const configFireBase = {
     ListasPageModule,
     ConfigContaPageModule,
     MinhaListaPageModule,
-    ImagensPageModule
+    ImagensPageModule,
+    IonMaskModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

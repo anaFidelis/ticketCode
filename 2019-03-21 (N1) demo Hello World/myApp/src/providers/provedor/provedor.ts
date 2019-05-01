@@ -19,7 +19,7 @@ export class provedorProvider {
 
 
   private baseApi = "https://api.themoviedb.org/3/";
-  private BasewebService = "/myfilme";
+  private BasewebService = "/TicketCode";
   private cabecalho = new Headers();
   private idUsuario: number;
 

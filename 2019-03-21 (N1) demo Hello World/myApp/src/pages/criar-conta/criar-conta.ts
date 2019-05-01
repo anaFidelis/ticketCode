@@ -21,7 +21,13 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class CriarContaPage {
   form: FormGroup;
-  
+  cpf_cnpj = '';
+  DECIMAL_SEPARATOR = ".";
+  GROUP_SEPARATOR = ",";
+  pureResult: any;
+  maskedId: any;
+  val: any;
+  v: any;
 
   constructor(
     public navCtrl: NavController,
@@ -31,48 +37,49 @@ export class CriarContaPage {
     private formBuilder: FormBuilder,
     private auth: AngularFireAuth) {
     this.form = this.formBuilder.group({
-      //nome: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
-     // login: [null, [Validators.required, Validators.minLength(2), Validators.maxLength(30)]],
-      email: [null, [Validators.required, Validators.email]],
+      nome: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
+      login: [null, [Validators.required, Validators.minLength(2), Validators.maxLength(30)]],
+      //email: [null, [Validators.required, Validators.email]],
       senha: [null, [Validators.required, Validators.minLength(6), Validators.maxLength(20)]]
 
     });
   }
 
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad CriarContaPage');
   }
   criarConta() {
     let usuario = this.form.value;
-    let toast = this.toastCtrl.create({duration: 3000, position: 'buttom'});
+    let toast = this.toastCtrl.create({ duration: 3000, position: 'buttom' });
     if (this.form.valid) {
       this.auth.auth.createUserWithEmailAndPassword(usuario.email, usuario.senha);
-     /* this.autenticacao.criarUsuario(usuario).subscribe(
-        data => {
-          toast.setMessage("Usuario criado com sucesso.");
-          this.autenticacao.logar(usuario).subscribe(
-            data => {
-              const response = (data as any);
-              const retorno = JSON.parse(response._body);
-              this.autenticacao.setUsuario(retorno.idusuario);
-              this.navCtrl.setRoot(TabsPage);
+      /* this.autenticacao.criarUsuario(usuario).subscribe(
+         data => {
+           toast.setMessage("Usuario criado com sucesso.");
+           this.autenticacao.logar(usuario).subscribe(
+             data => {
+               const response = (data as any);
+               const retorno = JSON.parse(response._body);
+               this.autenticacao.setUsuario(retorno.idusuario);
+               this.navCtrl.setRoot(TabsPage);
+ 
+             }, error => {
+               toast.setMessage(error._body);
+             })
+           this.navCtrl.setRoot(TabsPage);
+         }, error => {
+           toast.setMessage(error._body);
+         }*/
+      // );
 
-            }, error => {
-              toast.setMessage(error._body);
-            })
-          this.navCtrl.setRoot(TabsPage);
-        }, error => {
-          toast.setMessage(error._body);
-        }*/
-     // );
-
-    }else{
+    } else {
       toast.setMessage("Campos invalidos");
     }
     toast.present();
   }
 
-  showLoginPage(){
+  showLoginPage() {
     this.navCtrl.push(LoginPage);
   }
 }

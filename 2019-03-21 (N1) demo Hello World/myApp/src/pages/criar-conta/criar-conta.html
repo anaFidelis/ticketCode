@@ -6,8 +6,13 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>criarConta</ion-title>
+  <ion-navbar color="dark">
+    <ion-buttons>
+      <button ion-button tappable (click)="showLoginPage()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Cadastrar-se</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,17 +21,21 @@
 <ion-content padding>
 
   <div [formGroup]="form" class="criarConta">
-  <!--  <ion-item>
+    <ion-item>
       <ion-label stacked>Nome</ion-label>
-      <ion-input type="text" formControlName="nome" name="nome"></ion-input>
+      <ion-input type="text" name="nome"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label stacked>login</ion-label>
-      <ion-input type="text" formControlName="login" name="login"></ion-input>
-    </ion-item>-->
+      <ion-label stacked>Telefone</ion-label>
+      <ion-input type="text" name="telefone"></ion-input>
+    </ion-item>
     <ion-item>
-      <ion-label stacked>Email</ion-label>
-      <ion-input type="text" formControlName="email" name="email"></ion-input>
+      <ion-label stacked>Endereço</ion-label>
+      <ion-input type="text" name="endereco"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Login</ion-label>
+      <ion-input type="text" name="login"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Senha</ion-label>
@@ -37,11 +46,6 @@
 
 
   <div padding class="Botao">
-    <button (click)="criarConta()" ion-button block>Criar conta</button>
+    <button (click)="criarConta()" ion-button block color="dark">Criar conta</button>
   </div>
-  <div padding class="Botao">
-    <button (click)="showLoginPage()" ion-button block>Login</button>
-  </div>
-
-
 </ion-content>
