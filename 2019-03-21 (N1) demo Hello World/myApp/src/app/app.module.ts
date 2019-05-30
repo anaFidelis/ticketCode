@@ -27,9 +27,6 @@ import { ConfigContaPageModule } from '../pages/config-conta/config-conta.module
 import { MinhaListaPageModule } from '../pages/minha-lista/minha-lista.module';
 import { ImagensPageModule } from '../pages/imagens/imagens.module';
 
-import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
-import { FormsModule } from '@angular/forms';
-
 import { IonMaskModule } from '@pluritech/ion-mask';
 
 const configFireBase = {
@@ -68,7 +65,6 @@ const configFireBase = {
     ConfigContaPageModule,
     MinhaListaPageModule,
     ImagensPageModule,
-    FormsModule,
     IonMaskModule.forRoot()
   ],
   bootstrap: [IonicApp],
@@ -82,7 +78,6 @@ const configFireBase = {
   providers: [
     StatusBar,
     SplashScreen,
-    BarcodeScanner,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     provedorProvider
   ]
