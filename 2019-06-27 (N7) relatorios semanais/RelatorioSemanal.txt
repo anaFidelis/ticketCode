@@ -1,0 +1,31 @@
+Dia 14/03: Decidimos fazer um hello world individual para cada um aprender a utilizar o framework
+Meu hello world não saiu como o planejado pois depois de certo ponto não consegui mais executar minha aplicação
+
+Dia 21/03: Único hello world que funcionou foi o da Ana, então demonstramos esse, e entregamos
+Começamos a fazer a proposta comercial
+
+Dia 28/03: Terminamos a proposta comercial e entregamos na primeira aula e começamos a fazer o PITCH, na segunda aula apresentamos o PITCH
+
+Dia 04/04: Discutimos como iriamos fazer, modelamos o que iria ter no front, no back e no banco.
+
+Dia 11/04: Cada um começou a fazer sua parte, o front já tínhamos uma tela para teste de login e cadastro, o banco e o back estávamos com problema para juntar os dois.
+
+Dia18/04: Nosso banco e back ainda não funcionam juntos. Fizemos as operações básicas no back, e o banco estava modelado.
+
+Dia 25/04: Mudamos algumas coisas no back, para poder rodar no firebase, e parou de funcionar, decidimos focar mais no front por enquanto. No front estamos criando a tela de home.
+
+Dia 02/05: Conversamos com outro aluno da matéria e percebemos que não precisávamos de um back. Fizemos a entrega do que tínhamos até agora.
+
+Dia 09/05: Começamos a refazer nosso banco, e precisávamos aprender a como usar ele de forma que ele se torne nosso back. 
+
+Dia 16/05: Nosso front parou de funcionar, e mais ninguém consegue rodar ele. Remodelamos o banco e fizemos teste usando o postman.
+
+Dia 23/05: Fizemos separadamente do nosso projeto um leitor e gerador de QRCode, e juntamos com o que tínhamos no front, ainda sem rodar. Enquanto isso, continuamos tentando estruturar os dados de forma a enviar eles da forma correta para o Firebase.
+
+Dia 30/05: Recriamos um projeto do zero, e fomos trazendo aos poucos o que tínhamos feito, porem começou a dar erro novamente, e não descobrimos qual era o erro. Entregamos o projeto antigo.
+
+Dia 06/06: Continuamos tentando trazer os dados antigos para o projeto novo, e o erro persiste. Em uma conversa com o "ajudante/especialista" de outra equipe, percebemos que a estrutura enviada para o Firebase ainda não estava correta.
+
+Dia 13/06: Nossa equipe ficou desfalcada por problemas de saúde, mas mesmo assim continuamos tentando resolver o erro no front. Enquanto descobrimos a forma certa de enviar os dados para o Firebase.
+
+Dia 20/06: Conseguimos montar toda a estrutura no Firebase e devido a isso zeramos todos os dados que estavam na base. Continuamos com o erro no front(mesmo conversando com outros programadores da linguagem, não achamos como arrumar o problema), e não conseguindo fazer a comunicação entre o front e o back.
