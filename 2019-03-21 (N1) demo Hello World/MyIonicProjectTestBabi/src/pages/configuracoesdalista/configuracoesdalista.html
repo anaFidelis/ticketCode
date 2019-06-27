@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="topo"></ion-icon>
+    </button>
+    <ion-title>Configurações da Lista</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content [formGroup]="form">
+
+  <div class="imgdiv">
+    <ion-img name="img" width="100" height="100" src="../../assets/imgs/+'imagem"></ion-img>
+
+  </div>
+
+
+  <div class="titulo">
+    <ion-item>
+      <ion-label stacked>*Nome Da Lista</ion-label>
+      <ion-input type="text" name="nomelista" formControlName="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>*Descrição</ion-label>
+      <ion-input type="text" name="descricao" formControlName="descricao"></ion-input>
+    </ion-item>
+    <div padding style="text-align:center">
+      <a (click)="selecionarImagem()">Alterar imagem</a>
+    </div>
+  </div>
+
+
+
+
+  <div padding class="botao">
+    <button (click)="salvar()" ion-button block>Salvar</button>
+  </div>
+
+
+</ion-content>

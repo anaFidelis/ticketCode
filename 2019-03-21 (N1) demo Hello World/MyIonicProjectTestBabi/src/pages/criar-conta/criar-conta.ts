@@ -1,8 +1,10 @@
 import { Component, Provider } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { provedorProvider } from '../../providers/provedor/provedor';
+import { TabsPage } from '../tabs/tabs';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { LoginPage } from '../login/login';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 /**
